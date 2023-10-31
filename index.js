@@ -7,6 +7,7 @@ const categoryRouter = require('./Categories/router/router')
 const subcategoryRouter = require('./Subcategories/router/router')
 const sectionRouter = require('./Sections/router/router')
 const productRouter = require('./Products/router/router')
+const port = process.env.PORT || 3000;
 
 app.use(cors())
 app.use(express.json())
@@ -19,6 +20,8 @@ app.use('/items/product', productRouter)
 const start = async () => {
     try {
         await mongoose.connect('mongodb+srv://musiienkodev:Jbg3GCanvcBEVR8m@88db.kqy2jpz.mongodb.net/');
+        app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
     } catch (e) {
         console.log(e)
     }
