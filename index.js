@@ -17,11 +17,14 @@ app.use('/items/category', categoryRouter)
 app.use('/items/subcategory', subcategoryRouter)
 app.use('/items/section', sectionRouter)
 app.use('/items/product', productRouter)
+
 const start = async () => {
     try {
         await mongoose.connect('mongodb+srv://musiienkodev:Jbg3GCanvcBEVR8m@88db.kqy2jpz.mongodb.net/');
-        app.listen(port, () => {
+app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
+});
+
     } catch (e) {
         console.log(e)
     }
