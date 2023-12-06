@@ -7,7 +7,7 @@ const categoryRouter = require('./Categories/router/router')
 const subcategoryRouter = require('./Subcategories/router/router')
 const sectionRouter = require('./Sections/router/router')
 const productRouter = require('./Products/router/router')
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3002;
 
 app.use(cors())
 app.use(express.json())
