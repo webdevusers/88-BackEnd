@@ -82,10 +82,9 @@ class CategoryController {
     res.status(200).json({ category });
   }
   async actionBar(req, res) {
-    const { id } = req.body;
 
     try {
-      const category = await Category.findById(id)
+      const category = await Category.find()
         .populate({
           path: "subcategories",
           populate: {
